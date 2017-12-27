@@ -10,7 +10,9 @@ application on [Goodrain](https://www.goodrain.com). For more information see th
 
 ```bash
 
-docker run -it --rm -v $PWD:/app goodrainapps/spring-boot-cli:1.5.9 spring init --dependencies=web rainbond-spring-demo
+docker run -it --rm \
+-v $PWD:/app goodrainapps/spring-boot-cli:1.5.9 spring init --dependencies=web rainbond-spring-demo
+
 cd rainbond-spring-demo/src/main/java/com/example/rainbondspringdemo
 ```
 
@@ -44,7 +46,9 @@ public class DemoApplication {
 build
 
 ```bash
-docker run -it --rm -v "$PWD"/rainbond-spring-demo:/app/build -w /app/build maven:3.5.2-jdk-7-alpine mvn -B -DskipTests=true clean install
+docker run -it --rm \
+-v "$PWD"/rainbond-spring-demo:/app/build \
+-w /app/build maven:3.5.2-jdk-7-alpine mvn -B -DskipTests=true -s settings.xml clean install
 ```
 
 
