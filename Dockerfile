@@ -5,7 +5,9 @@ RUN mkdir /app
 COPY . /app/
 
 WORKDIR /app
-RUN mv /app/settings.xml /root/.m2/ \
-    && mvn clean install
+
+EXPOSE 5000
+
+RUN mvn -s settings.xml -B -DskipTests=true clean install
 
 ENTRYPOINT ["/app/run.sh"]
