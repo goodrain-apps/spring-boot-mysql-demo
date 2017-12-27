@@ -46,11 +46,18 @@ public class DemoApplication {
 build
 
 ```bash
+cd rainbond-spring-demo
 docker run -it --rm \
--v "$PWD"/rainbond-spring-demo:/app/build \
+-v "$PWD":/app/build \
 -w /app/build maven:3.5.2-jdk-7-alpine mvn -B -DskipTests=true -s settings.xml clean install
 ```
 
+run
+
+```bash
+cd rainbond-spring-demo
+docker run -it --rm -v $PWD:/app -w /app -p 8080:8080  goodrainapps/openjdk:8u131-jre-alpine java  -jar target/*.jar
+```
 
 docker run -it --link mysql -e DATABASE_URL='jdbc:mysql://mysql:3306/test' -p 5000:5000 spring-boot-database-demo
 ```
