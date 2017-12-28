@@ -5,7 +5,7 @@
 ## 创建demo镜像
 
 ```bash
-docker build goodrainapps/spring-boot-mysql-demo .
+docker build -t goodrainapps/spring-boot-mysql-demo .
 ```
 
 ## 运行demo
