@@ -66,7 +66,7 @@ $ docker run -it --rm -v $PWD:/app -w /app -p 8080:8080  goodrainapps/openjdk:8u
 
 云帮提供Spring-boot-mysql-demo的相关配置目录结构如下，配置文件内容仅供参考。
 
-<img src="/Users/edz/Desktop/spring-boot-demo1.png" width="30%" />
+<img src="https://static.goodrain.com/images/acp/docs/code-docs/java/spring-boot-demo1.png" width="30%" />
 
 详细配置参考下文：
 
